@@ -15,8 +15,14 @@ policy = policy_catapult
 commonName              = supplied
 
 [req]
+x509_extensions = v3_ca
 prompt = no
 distinguished_name = dn
+
+[v3_ca]
+basicConstraints = critical,CA:true
+keyUsage = critical, keyCertSign, cRLSign
+subjectKeyIdentifier = hash
 
 [dn]
 CN = {{{name}}}-account
