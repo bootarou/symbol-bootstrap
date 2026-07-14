@@ -44,6 +44,8 @@ enableStrictCosignatureCheck: false
 enableBondedAggregateSupport: true
 maxBondedTransactionLifetime: 48h
 maxTransactionsPerBlock: 6000
+emptyBlockPolicy: normal
+emptyBlockHeartbeatInterval: 86400s
 stepDuration: 4m
 minNamespaceDuration: 1m
 trustedHosts: 127.0.0.1
@@ -64,7 +66,7 @@ maxNameSize: 64
 maxChildNamespaces: 256
 maxNamespaceDepth: 3
 batchVerificationRandomSource:
-symbolServerImage: nftdrive/bnl-catapult-server-pqc:1.0.3.9-bnl
+symbolServerImage: nftdrive/bnl-catapult-server-pqc:1.0.3.9-bnl-ebp
 symbolRestImage: nftdrive/bnl-catapult-rest-pqc:2.4.3-bnl
 symbolExplorerImage: symbolplatform/symbol-explorer:1.1.1-alpha-202110290945
 symbolFaucetImage: symbolplatform/symbol-faucet:1.0.1-alpha-202110131930

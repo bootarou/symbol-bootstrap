@@ -50,6 +50,12 @@ harvestNetworkFeeSinkAddress = {{{harvestNetworkFeeSinkAddress}}}
 
 maxTransactionsPerBlock = {{{toAmount maxTransactionsPerBlock}}}
 
+# empty block policy: normal (harvest empty blocks, legacy), suppress (skip harvest attempts
+# while there are no pending transactions) or heartbeat (like suppress, but harvest one empty
+# block whenever emptyBlockHeartbeatInterval has elapsed since the last block)
+emptyBlockPolicy = {{{emptyBlockPolicy}}}
+emptyBlockHeartbeatInterval = {{{emptyBlockHeartbeatInterval}}}
+
 [plugin:catapult.plugins.accountlink]
 
 dummy = to trigger plugin load
